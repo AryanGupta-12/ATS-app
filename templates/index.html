@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Resume Matcher</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+</head>
+<body>
+    <h2 class="heading"> Applicant Tracking System</h2>
+    <div class="container">
+        <div class="left-section">
+            <h2>Upload Resumes (Max 3)</h2>
+            <form id="resume-form" enctype="multipart/form-data">
+                <input type="file" id="resume-input" name="resume" multiple accept="application/pdf">
+                <ul id="resume-list"></ul>
+                <button type="submit">Upload Resumes</button>
+                <div id="resume-modal" class="modal">
+                    <div class="modal-content">
+                        <span class="close">&times;</span>
+                        <p id="resume-modalMessage"></p>
+                    </div>
+                </div>
+            </form>
+            <h2>Upload Job Description</h2>
+            <form id="jd-form" enctype="multipart/form-data">
+                <input type="file" id="jd-input" name="job_description" accept="application/pdf">
+                <ul id="jd-list"></ul>
+                <button type="submit">Upload Job Description</button>
+                <div id="jd-modal" class="modal">
+                    <div class="modal-content">
+                        <span class="close">&times;</span>
+                        <p id="jd-modalMessage"></p>
+                    </div>
+                </div>
+            </form>
+            <button id="process-button">Process</button>
+            <div id="process-modal" class="modal">
+                <div class="modal-content">
+                    <span class="close">&times;</span>
+                    <p id="process-modalMessage"></p>
+                </div>
+            </div>
+        </div>
+        <div class="right-section">
+            <h2>Output</h2>
+            <textarea id="output" readonly></textarea>
+        </div>
+    </div>
+
+    <script src="{{ url_for('static', filename='script.js') }}"></script>
+</body>
+</html>
