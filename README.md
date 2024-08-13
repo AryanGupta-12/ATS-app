@@ -1,8 +1,11 @@
 # ATS-app (Applicant Tracking System)
 This is a Flask-based tool for evaluating resumes against job descriptions. It uses Groq LLM to extract and analyze relevant information from both PDFs, calculates match percentages based on cosine similarity, and displays detailed results. The app also features a dynamic waiting time display that shows real-time elapsed time from processing initiation to result display. Users can upload multiple resumes and a job description, which are processed to identify the best-fit candidates.
-![ATS-Image] (https://github.com/AryanGupta-12/ATS-app/issues/1#issue-2463114226)
+![ATS-Image](https://github.com/AryanGupta-12/ATS-app/issues/1#issue-2463114226)
 
 ## Docker 
-This app can be used by leveraging docker. See overview of this repository for further details.
+This app can be used by leveraging docker. 
+
+See overview of this repository for further details.
+
 [Docker-ats-app](https://hub.docker.com/r/aryan018/ats-app)
 
