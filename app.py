@@ -9,9 +9,7 @@ from sklearn.feature_extraction.text import TfidfVectorizer
 from sklearn.metrics.pairwise import cosine_similarity
 from langchain_groq import ChatGroq
 from langchain_core.prompts import ChatPromptTemplate
-from dotenv import load_dotenv
 
-load_dotenv(dotenv_path="config.env")
 app = Flask(__name__)
 app.config['RESUME_UPLOAD_FOLDER'] = 'uploads/resume/'
 app.config['JD_UPLOAD_FOLDER'] = 'uploads/desc/'
